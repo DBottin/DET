@@ -5,7 +5,7 @@ import pandas as pd
 #Daten einlesen
 dataset = pd.read_csv("https://raw.githubusercontent.com/DBottin/DET/main/DATA.csv")
 
-#Datensätze zu Integer machen
+#Datensätze zu Integer machen, damit DecisionTreeClassifier funktioniert
 
 dataset["age"] = dataset["age"].astype('category')
 dataset["age"] = dataset.age.cat.codes
